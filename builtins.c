@@ -2,7 +2,6 @@
 
 /**
  * builtins - Check and execute the builtins
- *
  * @info: Information about the shell
  * @arguments: Commands and arguments
  *
@@ -23,8 +22,6 @@ int builtins(general_t *info, char **arguments)
 
 /**
  * check_builtin - Check if the actual command is a builtin_t
- * or not
- *
  * @info: General information about the shell
  * @arguments: Arguments of the command
  *
@@ -33,7 +30,8 @@ int builtins(general_t *info, char **arguments)
  **/
 int check_builtin(general_t *info, char **arguments)
 {
-	int i, size;
+	int i;
+	int size;
 	builtin_t builtins[] = {
 		{"exit", bin_exit},
 		{"env", bin_env}
